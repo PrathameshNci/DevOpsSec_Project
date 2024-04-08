@@ -6,7 +6,7 @@ After=network.target
 User=ubuntu
 Group=www-data
 WorkingDirectory=/home/ubuntu/gym_website
-ExecStart=/home/ubuntu/env/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/gym_website/gym_website/gym_website.sock gym_website.wsgi:application
+ExecStart=gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/gym_website/gym_website/gym_website.sock gym_website.wsgi:application
 
        
 [Install]
